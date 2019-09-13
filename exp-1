@@ -1,0 +1,94 @@
+def listfun():
+	list1=[1,2,3,3,3,3,4,5]
+	list2=[6,7,8,9]
+	print("Press 1 for Append\n 2 to Remove\n 3 to Sort\n 4 to Reverse \n 5 to Count \n 6 to Extend\n 7 to Delete\n 8 for Length of list:")
+	choice=int(input(""))
+	if choice==1:
+		num=int(input("Enter the number to append:"))
+		list1.append(num)
+		print(list1)
+	elif choice==2:
+		num=int(input("Enter the number to be removed:"))
+		list1.remove(num)
+		print(list1)
+	elif choice==3:
+		list1.sort()
+		print(list1)
+	elif choice==4:
+		list1.sort(reverse=True)
+		print(list1)
+	elif choice==5:
+		num=int(input("Enter the number to be counted:"))
+		print(list1.count(num))
+	elif choice==6:
+		list1.extend(list2)
+		print(list1)
+	elif choice==7:
+		del list1
+		print(list1)
+	elif choice==8:
+		print(len(list1))
+
+def setfun():
+	set1={1,2,3,4,5}
+	set2={6,7,8,9}
+	print("Press 1 for Union\n 2 for Intersection\n 3 for Add\n 4 for Difference\n 5 for Clear:")
+	choice=int(input(""))
+	if choice==1:
+		print(set1|set2)
+	elif choice==2:
+		print(set1&set2)
+	elif choice==3:
+		num=int(input("Enter the number to be counted:"))
+		set1.add(num)
+		print(set1)
+	elif choice==4:
+		print(set1-set2)
+	elif choice==5:
+		set1.clear()
+		print(set1)
+
+def tupfun():
+	tuple1 = (0, 1, 2, 3) 
+	tuple2 = ('python', 'geek')
+	print("Press 1 for Concatenation\n 2 for Length\n 3 for Repetition:")
+	choice=int(input(""))
+	if choice==1:
+		print(tuple1 + tuple2)
+	elif choice==2:
+		print(len(tuple2)) 
+	elif choice==3:
+		tuple3 = ('python',)*3
+		print(tuple3)
+
+def dictfun():
+	print("Press 1 for Adding Elements\n 2 for Accessing Elements\n 3 for Removing Elements:")
+	choice=int(input(""))
+	if choice==1:
+		Dict1={}
+		Dict1[0] = 'Geeks'
+		Dict1[2] = 'For'
+		Dict1[3] = 1
+		print("\nDictionary after adding 3 elements: ") 
+		print(Dict1) 
+	elif choice==2:
+		Dict1 = {1: 'Geeks', 'name': 'For', 3: 'Geeks'}
+		print("Acessing a element using key:") 
+		print(Dict[1]) 
+	elif choice==3:
+		Dict1 = { 5 : 'Welcome', 6 : 'To', 7 : 'Geeks', 'A' : {1 : 'Geeks', 2 : 'For', 3 : 'Geeks'}, 'B' : {1 : 'Geeks', 2 : 'Life'}}
+		del Dict1[6] 
+		print("\nDeleting a specific key: ") 
+		print(Dict1)
+
+
+print("Press 1 for Lists\n 2 for Sets\n 3 for Tuples\n 4 for Dictionary:")
+choice=int(input(""))
+if choice==1:
+	listfun()
+elif choice==2:
+	setfun()
+elif choice==3:
+	tupfun()
+elif choice==4:
+	dictfun()
